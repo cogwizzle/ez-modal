@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/build/ez-modal.js"></script>
+
+</head>
+<body>
+  <button>Open Modal!</button>
+  <ez-modal>
+    <h1 slot="title">Alert</h1>
+    Hello World!
+  </ez-modal>
+  <script>
+    var button = document.querySelector('button');
+    button.addEventListener('click', function() {
+      var modal = document.querySelector('ez-modal');
+      modal.open();
+    });
+  </script>
+  <style>
+    h1 {
+      margin: 0;
+    }
+  </style>
+</body>
+</html>
