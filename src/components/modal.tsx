@@ -54,7 +54,7 @@ export class Modal {
         )
       }>
         <header class="relative">
-          <slot name="title" />
+          <slot name="title"><h1 class="m-0">Alert</h1></slot>
           <button
             onClick={this.close.bind(this)}
             class="absolute pin-t pin-r mr-2 font-sans text-2xl cursor-pointer border-none bg-white focus--outline-none"
