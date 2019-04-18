@@ -1,73 +1,24 @@
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
 :host {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  pointer-events: none;
+  @apply fixed w-full h-screen pointer-events-none pin-t pin-l;
 }
+
 
 .backdrop {
-  positon: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, .70);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-out;
-  z-index: 100;
-}
-
-:host([is-open]) .backdrop{
-  pointer-events: all;
-  opacity: 1;
+  transition: opacity 0.5s ease-out;
 }
 
 .ez-modal {
+  left: 0;
   box-sizing: border-box;
-  z-index: 110;
-  position: fixed;
-  opacity: 0;
-  width: 90%;
-  left: 5%;
-  pointer-events: none;
-  top: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  transition: all 0.3s ease-out;
-  background-color: white;
-  padding: 1rem;
 }
 
-:host([is-open]) .ez-modal {
-  pointer-events: all;
-  opacity: 1;
-  top: 10vh;
-}
-
-.ez-modal header {
-  position: relative;
-}
-
-.ez-modal header .ez-modal__close-button {
-  position: absolute;
-  top: 0;
-  right: 0.5rem;
-  font-family: sans-serif;
-  font-size: 1.5rem;
-  cursor: pointer;
-  border: none;
-  background-color: white;
-}
-
-.ez-modal header .ez-modal__close-button:focus {
-  outline: none;
-}
-
-@media(min-width: 768px) {
+@screen md {
   .ez-modal {
-    width: 50%;
     left: calc(50% - 25%);
   }
 }
