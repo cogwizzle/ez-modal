@@ -4,9 +4,54 @@
 
 This is an example project to try out stencil components.
 
-## Getting Started
+## Installing
+Installing this app can be done a few ways.
+
+### Quickstart
+Add this script to your head tag.
+```javascript
+<script src="https://unpkg.com/ez-modal@0.0.4/dist/ez-modal.js"></script>
+```
+
+### NPM
+Install the package using npm or yarn.
+
+npm:
+
+```bash
+npm i --save ez-modal
+```
+
+yarn:
+
+```bash
+yarn add ez-modal
+```
+
+Including these tags in your project.
+```javascript
+import my-component;
+```
+
+If you need to integrate this into another framework like React or angular be sure to check out the [Stencil page for integration](https://stenciljs.com/docs/overview).
+
+## Getting started
+The basic usage of this modal is below.
+```html
+<ez-modal>
+  <h1 slot="title"><!--Optional-->
+    Alert
+  </h1>
+  Hello World!
+</ez-modal>
+```
+
+## Working on this project 
+Running this project locally...
 
 ```bash
 npm install
 npm start
 ```
+
+
