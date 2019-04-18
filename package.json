@@ -16,9 +16,15 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
-  "dependencies": {},
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "classnames": "^2.2.6",
+    "tailwindcss": "^0.7.4"
+  },
   "devDependencies": {
-    "@stencil/core": "~0.16.2"
+    "@stencil/core": "~0.16.2",
+    "@stencil/postcss": "^0.1.0",
+    "autoprefixer": "^9.5.1"
   },
   "license": "MIT"
 }
