@@ -4,6 +4,8 @@
 
 This is an example project to try out stencil components.
 
+![Modal](./images/ez-modal.png)
+
 ## Installing
 Installing this app can be done a few ways.
 
@@ -45,6 +47,7 @@ The basic usage of this modal is below.
   Hello World!
 </ez-modal>
 ```
+![Modal](./images/ez-modal.png)
 
 ## Working on this project 
 Running this project locally...
