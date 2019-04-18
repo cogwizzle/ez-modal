@@ -975,7 +975,7 @@ module.exports = {
   options: {
     prefix: '',
     important: false,
-    separator: '--',
+    separator: '--', // Changed this because ':' character wasn't being picked up by stencil causing styles to be removed that were used.
   },
 
 }
