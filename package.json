@@ -1,6 +1,6 @@
 {
   "name": "ez-modal",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Stencil Component Starter",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -26,5 +26,36 @@
     "@stencil/postcss": "^0.1.0",
     "autoprefixer": "^9.5.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "web",
+    "component",
+    "html5",
+    "javascript",
+    "reusable",
+    "stenciljs",
+    "v1",
+    "modal",
+    "popup",
+    "simple",
+    "easy",
+    "ez-modal",
+    "ez",
+    "backdrop",
+    "html",
+    "element",
+    "css",
+    "scoped",
+    "tailwind",
+    "tailwind-css",
+    "tailwindcss",
+    "functional",
+    "close",
+    "open",
+    "lifecycle",
+    "example",
+    "tag",
+    "custom",
+    "postcss"
+  ]
 }

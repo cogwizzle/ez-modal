@@ -13,9 +13,7 @@ import '@stencil/core';
 export namespace Components {
 
   interface EzModal {
-    'close': () => void;
     'isOpen': boolean;
-    'open': () => void;
   }
   interface EzModalAttributes extends StencilHTMLAttributes {
     'isOpen'?: boolean;

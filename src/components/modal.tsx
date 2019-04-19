@@ -1,4 +1,4 @@
-import { Component, Prop, Method } from "@stencil/core";
+import { Component, Prop } from "@stencil/core";
 import classnames from 'classnames';
 
 @Component({
@@ -17,13 +17,11 @@ export class Modal {
   })
   isOpen: boolean = false;
 
-  @Method()
-  open() {
+  _open() {
     this.isOpen = true;
   }
 
-  @Method()
-  close() {
+  _close() {
     this.isOpen = false;
   }
 
@@ -44,7 +42,7 @@ export class Modal {
             }
           )
         }
-        onClick={this.close.bind(this)}
+        onClick={this._close.bind(this)}
       />,
       <div class={
         classnames(
@@ -60,7 +58,7 @@ export class Modal {
         <header class="relative">
           <slot name="title"><h1 class="m-0">Alert</h1></slot>
           <button
-            onClick={this.close.bind(this)}
+            onClick={this._close.bind(this)}
             class="absolute pin-t pin-r mr-2 font-sans text-2xl cursor-pointer border-none bg-white focus--outline-none"
           >X</button>
         </header>
