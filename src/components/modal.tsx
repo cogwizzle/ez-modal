@@ -10,7 +10,7 @@ import classnames from 'classnames';
   scoped: true,
 })
 export class Modal {
-  firstRender: false;
+  firstRender: boolean = true;
   @Prop({
     reflectToAttr: true,
     mutable: true,
@@ -25,6 +25,10 @@ export class Modal {
   @Method()
   close() {
     this.isOpen = false;
+  }
+
+  componentDidLoad() {
+    this.firstRender = false;
   }
 
   render() {
@@ -47,9 +51,9 @@ export class Modal {
           'ez-modal',
           'fixed w-screen md--w-1/2 pin-t z-20 bg-white md--rounded mt-0 md--mt-32 p-8 h-screen md--h-auto md--max-h-1/2vh animated overflow-hidden flex flex-col',
           {
-            'opacity-100 pointer-events-auto': this.isOpen,
-            'opacity-0 pointer-events-none fadeOutUp': !this.isOpen,
-            'fadeInDown': !this.firstRender && this.isOpen,
+            'opacity-100 pointer-events-auto fadeInDown': this.isOpen,
+            'opacity-0 pointer-events-none': !this.isOpen,
+            'fadeOutUp': !this.firstRender && !this.isOpen,
           }
         )
       }>
@@ -60,7 +64,7 @@ export class Modal {
             class="absolute pin-t pin-r mr-2 font-sans text-2xl cursor-pointer border-none bg-white focus--outline-none"
           >X</button>
         </header>
-        <div class="relative block overflow-y-auto">
+        <div class="relative block overflow-y-auto scrolling-auto">
           <slot />
         </div>
       </div>
