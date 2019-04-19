@@ -32,7 +32,6 @@ export class Modal {
   }
 
   render() {
-    console.log('firstRender: ', this.firstRender);
     return ([
       <div
         class={
